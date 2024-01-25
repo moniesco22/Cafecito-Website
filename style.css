@@ -1,0 +1,81 @@
+:root {
+  --bg-color: #56351E;
+  --sec-color: #C47335;
+  --tri-color: #ECDCB0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER
+------------------------------------------------------------------*/
+header {
+  float: right;
+  margin: 50px;
+  margin-right: 450px;
+  font-family: sans-serif;
+  font-size: xx-large;
+  text-decoration: none;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: rgb(142, 73, 0);
+  /* text-shadow: 3px 3px var(--sec-color); */
+}
+
+/* NAVIBAR
+------------------------------------------------------------------*/
+.NavBar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+}
+
+.NavBar right {
+  float: right;
+}
+
+.Name li a {
+  color: var(--sec-color);
+}
+
+li {
+  display: inline;
+  float: right;
+  background-color: var(--sec-color);
+  margin: 5px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 1s;
+}
+
+/*  GENERAL STYLES
+---------------------------------------------------------------------------*/
+body {
+  background-color: var(--tri-color);
+}
+
+/* FOOTER
+--------------------------------------------------------------------------*/
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: auto;
+  background-color: whitesmoke;
+  list-style-type: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
