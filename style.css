@@ -53,9 +53,10 @@ li {
   margin: 5px;
 }
 
-li a {
+.NaviBar li a {
   display: flex;
   color: white;
+  background-color: var(--sec-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -75,7 +76,7 @@ footer {
   clear: both;
   text-align: center;
   list-style-type: none;
-  padding-top: 5px;
+  padding-top: 130px;
   padding-bottom: 5px;
   text-decoration: none;
 }
@@ -84,41 +85,21 @@ footer a {
   text-decoration: none;
 }
 
-/* About Us Page
---------------------------------------------------------------------------*/
-
-.Hosts {
-  background-color: var(--bg-color);
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.Hosts img {
-  margin-left: 150px;
-}
-
-.Galaz {
-  float: left;
-  padding-left: 200px;
-  padding-top: 100px;
-}
-
-.Escobedo {
-  float: right;
-  padding-top: 100px;
-  padding-right: 150px;
-}
-
 /* VIDEO 
 --------------------------------------------------------------------------*/
 #intro_video {
+  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
   max-width: 100%;
   max-height: 100;
+  z-index: -1;
 }
 
-/* SOCIAL MEDIA LINKS*/
+.vvideo {}
+
+/* SOCIAL MEDIA LINKS
+------------------------------------------------------------------------*/
 ul {
   position: absolute;
   bottom: -130%;
@@ -126,6 +107,7 @@ ul {
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
+  padding-bottom: 50px;
   display: flex;
 }
 
@@ -225,11 +207,11 @@ ul li a:hover span:nth-child(4) {
 }
 
 .youtube:hover {
-  color: red;
+  color: #fc0808;
 }
 
 .youtube:hover span {
-  background: red;
+  background: #fc0808;
 }
 
 .instagram:hover {
@@ -241,9 +223,23 @@ ul li a:hover span:nth-child(4) {
 }
 
 ul li a .youtube {
-  color: rgb(254, 0, 0);
+  color: #fc0808;
 }
 
 ul li a:hover:nth-child(3) {
   color: #c32aa3;
+}
+
+
+/* About Us Page
+--------------------------------------------------------------------------*/
+
+.Hosts {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.Hosts img {
+  margin-left: 150px;
+  border: 8px solid var(--sec-color);
 }
