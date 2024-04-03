@@ -31,36 +31,67 @@ header h1 a {
 .NaviBar {
   position: sticky;
   top: 0;
+  z-index: 1000;
   width: 100%;
+  height: 180px;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   border-radius: 5px;
   background-color: rgba(255, 255, 255, .15);
   backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.NaviBar .NavBar_Right ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* margin-right: 20px; */
+}
+.NaviBar .NavBar_Right ul li{
+  display: inline-block;
+  margin-left: 20px;
 }
 
-.NaviBar right {
-  float: right;
+.NaviBar .NavBar_Right a {
+  font-size: 16px;
+  padding: 12px 16px;
 }
 
+.NaviBar .logo img{
+  width: 40px;
+}
+.NaviBar .NavBar_Right {
+  margin-right: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.NaviBar .NavBar_Right ul li:first-child{
+  margin-left: 0;
+}
 .Name li a {
   color: var(--sec-color);
 }
 
-li {
-  display: inline;
+.NaviBar .NavBar_right li {
+  display: inline-blcok;
   float: right;
+  margin-left: 20px;
   background-color: var(--sec-colorr);
   margin: 5px;
 }
 
 .NaviBar li a {
-  display: flex;
-  color: white;
-  background-color: var(--sec-color);
+  display: block;
+  color: var(--sec-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   transition: 1s;
+}
+.NaviBar .NavBar_Right ul li a:hover{
+  color: #000;
 }
 
 /*  GENERAL STYLES
@@ -73,30 +104,50 @@ body {
 --------------------------------------------------------------------------*/
 
 footer {
-  clear: both;
-  text-align: center;
-  list-style-type: none;
-  padding-top: 130px;
-  padding-bottom: 5px;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 20px;
   text-decoration: none;
+  text-align: center;
 }
 
-footer a {
-  text-decoration: none;
+footer ul{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+footer ul li {
+  margin: 0 15px;
+}
+
+footer small {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 /* VIDEO 
 --------------------------------------------------------------------------*/
 #intro_video {
-  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
   max-width: 100%;
   max-height: 100;
   z-index: -1;
 }
-
-.vvideo {}
+.vvideo{
+  padding-top: 70px;
+}
+.vvideo h2 {
+  text-align: center;
+  color: white;
+  text-shadow: black;
+}
 
 /* SOCIAL MEDIA LINKS
 ------------------------------------------------------------------------*/
@@ -233,13 +284,10 @@ ul li a:hover:nth-child(3) {
 
 /* About Us Page
 --------------------------------------------------------------------------*/
-
-.Hosts {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
 .Hosts img {
   margin-left: 150px;
   border: 8px solid var(--sec-color);
+}
+.info {
+  text-align: right;
 }
