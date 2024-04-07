@@ -39,57 +39,57 @@ header h1 a {
   background-color: rgba(255, 255, 255, .15);
   backdrop-filter: blur(5px);
   display: flex;
-  justify-content: space-between;
   align-items:center;
 }
+.NavBar_Right{
+  margin-left: auto;
+  display: flex;
+  padding-right: 20px;
+}
+
 .NaviBar .NavBar_Right ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  /* margin-right: 20px; */
 }
 .NaviBar .NavBar_Right ul li{
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .NaviBar .NavBar_Right a {
   font-size: 16px;
-  padding: 12px 16px;
+  padding: 20px 16px;
+  color: var(--sec-color);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
 }
 
 .NaviBar .logo img{
   width: 40px;
 }
-.NaviBar .NavBar_Right {
-  margin-right: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+
 .NaviBar .NavBar_Right ul li:first-child{
   margin-left: 0;
 }
+.NaviBar .NavBar_Right {
+  margin: 20px;
+  list-style: none;
+  padding: 0;
+}
+
 .Name li a {
   color: var(--sec-color);
 }
 
-.NaviBar .NavBar_right li {
-  display: inline-blcok;
-  float: right;
-  margin-left: 20px;
+.NaviBar .NavBar_Right li {
+  /* display: inline-blcok; */
+  /* float: right; */
+  margin: 5px; 
   background-color: var(--sec-colorr);
-  margin: 5px;
 }
 
-.NaviBar li a {
-  display: block;
-  color: var(--sec-color);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: 1s;
-}
 .NaviBar .NavBar_Right ul li a:hover{
   color: #000;
 }
@@ -118,7 +118,8 @@ footer ul{
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 20px;
+  padding-top: 100px;
+  /* padding-bottom: 20px; */
 }
 
 footer ul li {
@@ -134,19 +135,33 @@ footer small {
 /* VIDEO 
 --------------------------------------------------------------------------*/
 #intro_video {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
   max-width: 100%;
-  max-height: 100;
-  z-index: -1;
+  /* max-height: 100;
+  z-index: -1; */
+}
+.video-container{
+  position: relative;
 }
 .vvideo{
   padding-top: 70px;
 }
-.vvideo h2 {
+.overlay-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
-  text-shadow: black;
+  color: white
+}
+.overlay-text h2{
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.overlay-text p{
+  font-size: 1.5em;
 }
 
 /* SOCIAL MEDIA LINKS
