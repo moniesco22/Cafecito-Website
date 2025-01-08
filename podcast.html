@@ -16,7 +16,42 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet" />
       <title>El Cafecito Pentecostal</title>
-      <script defer src="./index.js"></script>
+     
+      <script src="https://apis.google.com/js/api.js"></script>
+      <script src="https://apis.google.com/js/api.js"></script>
+<script>
+  /**
+   * Sample JavaScript code for youtube.videos.list
+   * See instructions for running APIs Explorer code samples locally:
+   * https://developers.google.com/explorer-help/code-samples#javascript
+   */
+
+  function loadClient() {
+   console.log("testing");
+    gapi.client.setApiKey("AIzaSyC8JIlwYFBXxn_2YD8aJ5ujMW3dk5xwIdY");
+    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
+  }
+  // Make sure the client is loaded before calling this method.
+  function execute() {
+    return gapi.client.youtube.videos.list({
+      "id": [
+        "EU9JjgwhU28"
+      ],
+      "maxHeight": 72,
+      "maxResults": 5,
+      "maxWidth": 72
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  console.log("initializing")
+  gapi.load("client");
+</script>
    </head>
    <body>
       <!-- NaviBar -->
@@ -31,12 +66,18 @@
          </header>
         
          <div class="NavBar_Right">
-            <li> <a href="about.html">About us</a></li>
-            <li> <a href="contact.html">Contact us</a></li>
+            <li> <a href="about.html">About</a></li>
+            <li> <a href="contact.html">Contact</a></li>
             <li> <a href="podcast.html">Podcast</a></li>
          </div>
       </div>
+      <div class="Js_buttons">
 
+
+<button onclick="loadClient()">load</button>
+<button onclick="execute()">execute</button>
+
+      </div>
          <!--FOOTER-->
          <footer>
             <ul>
@@ -69,7 +110,7 @@
                   </a>
                </li>
             </ul>
-            <small>&copy; El Cafécito Pentecostal</small>
+            <small>&copy; El Cafécito Pentecostal, creator M.E.B.</small>
       </footer>
 
    </body>

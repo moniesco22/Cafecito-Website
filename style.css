@@ -301,8 +301,67 @@ ul li a:hover:nth-child(3) {
 --------------------------------------------------------------------------*/
 .Hosts img {
   margin-left: 150px;
-  border: 8px solid var(--sec-color);
+  border: 8px solid var(--bg-color);
 }
-.info {
-  text-align: right;
+.Hosts{
+  display: flex;
 }
+
+.image-container{
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+.Info {
+  float: right;
+  font-size: 30px;
+  margin-right: 20px;
+  width: calc(100% - 170px);
+  flex: 1;
+  margin-left: 20px;
+  margin-top: 150px;
+  color: var(--bg-color);
+}
+
+/* Contact Us Page:
+-------------------------------------------------------------------------- */
+
+.Email{
+  padding: 50px;
+  padding-left: 250px;
+}
+.env{
+  font-size: 40px;
+  color: #6b0000;
+
+}
+
+h3{
+  float: right;
+  padding-right: 670px;
+  padding-top: 10px;
+  color: #6b0000;
+}
+h6{
+  color: var(--bg-color)
+}
+
+.Email a{
+  text-decoration: none;
+}
+
+
+
+
+/* Podcast CSS */
+/* Hide all script elements except the one with src="index.js" */
+/* script:not([src="index.js"]) {
+  display: none;
+} */
+script{
+  display:block
+}
+
+.Js_buttons{
+  margin: 50px;
+}
+
